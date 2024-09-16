@@ -1,0 +1,42 @@
+.dashboard-header {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .card-custom {
+    border-radius: 0.75rem;
+  }
+
+  .card-header-custom {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .card-body-custom {
+    background-color: #e9ecef;
+  }
+
+  .stat-card {
+    display: flex;
+    align-items: center;
+  }
+
+  .stat-card-icon {
+    font-size: 2rem;
+    color: #007bff;
+  }
+
+  .stat-card-content {
+    margin-left: 1rem;
+  }
+
+  .recent-activities ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .recent-activities ul li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+  }

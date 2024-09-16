@@ -1,0 +1,23 @@
+.services-header {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .service-card {
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .service-card-icon {
+    font-size: 3rem;
+    color: #007bff;
+  }
+
+  .service-card-content {
+    padding: 1.5rem;
+  }
+
+  .service-card-content h5 {
+    margin-bottom: 1rem;
+  }
