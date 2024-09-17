@@ -1,0 +1,23 @@
+.about-header {
+    background-color: #f8f9fa;
+    padding: 3rem 0;
+  }
+
+  .about-content {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+
+  .team-section {
+    margin-top: 3rem;
+  }
+
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .team-member h5 {
+    margin-top: 1rem;
+  }

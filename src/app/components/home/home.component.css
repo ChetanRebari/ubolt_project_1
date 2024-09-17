@@ -1,0 +1,26 @@
+.card-custom {
+    transition: transform 0.3s;
+  }
+
+  .card-custom:hover {
+    transform: scale(1.05);
+  }
+
+  .main-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .data-section {
+    margin-top: 2rem;
+  }
+
+  .container {
+    max-width: 1200px;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
