@@ -8,72 +8,112 @@
             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
                     <nz-form [nzLayout]="'vertical'" class="form-container">
-                        <nz-form-item>
-                            <nz-form-label [nzSpan]="24">First Name</nz-form-label>
-                            <nz-form-control [nzErrorTip]="'First Name is required'">
-                                <input nz-input formControlName="firstname" placeholder="Enter your first name" />
-                            </nz-form-control>
-                        </nz-form-item>
-                        <p
-                            *ngIf="signUpForm.get('firstname')?.hasError('required') && signUpForm.get('firstname')?.touched">
-                            First Name is required.</p>
+                        <div>
+                            <nz-form-item>
+                                <nz-form-label [nzSpan]="24">First Name</nz-form-label>
+                                <nz-form-control [ngStyle]="{errorColor}">
+                                    <input nz-input formControlName="firstname" placeholder="Enter your first name" />
+                                </nz-form-control>
+                            </nz-form-item>
+                            <p
+                                *ngIf="signUpForm.get('firstname')?.hasError('required') && signUpForm.get('firstname')?.touched">
+                                First Name is required.</p>
+                        </div>
+                        <div>
+                            <nz-form-item>
+                                <nz-form-label [nzSpan]="24">Last Name</nz-form-label>
+                                <nz-form-control>
+                                    <input nz-input formControlName="lastname" placeholder="Enter your last name" />
+                                </nz-form-control>
+                            </nz-form-item>
+                            <p [ngClass]="{red:colorRed}"
+                                *ngIf="signUpForm.get('lastname')?.hasError('required') && signUpForm.get('lastname')?.touched">
+                                Last Name is required.
+                            </p>
+                        </div>
+                        <div>
+                            <nz-form-item>
+                                <nz-form-label [nzSpan]="24">Email</nz-form-label>
+                                <nz-form-control>
+                                    <input nz-input formControlName="email" type="email"
+                                        placeholder="Enter your email" />
+                                </nz-form-control>
+                            </nz-form-item>
+                            <div *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.errors">
+                                <p *ngIf="signUpForm.get('email')?.hasError('required')">
+                                    Email is required.
+                                </p>
+                                <p *ngIf="signUpForm.get('email')?.hasError('pattern') ">
+                                    Enter a valid email address.
+                                </p>
+                            </div>
 
-                        <nz-form-item>
-                            <nz-form-label [nzSpan]="24">Last Name</nz-form-label>
-                            <nz-form-control [nzErrorTip]="'Last Name is required'">
-                                <input nz-input formControlName="lastname" placeholder="Enter your last name" />
-                            </nz-form-control>
-                        </nz-form-item>
-                        <p
-                            *ngIf="signUpForm.get('lastname')?.hasError('required') && signUpForm.get('lastname')?.touched">
-                            Last Name is required.
-                        </p>
+                        </div>
+                        <div>
+                            <nz-form-item>
+                                <nz-form-label [nzSpan]="24">Mobile</nz-form-label>
+                                <nz-form-control>
+                                    <input nz-input maxlength="10" formControlName="mobile" type="tel" appNumberonly
+                                        placeholder="Enter your mobile number" />
+                                </nz-form-control>
+                            </nz-form-item>
+                            <div *ngIf="signUpForm.get('mobile')?.touched && signUpForm.get('mobile')?.errors">
+                                <p *ngIf="signUpForm.get('mobile')?.hasError('required')">
+                                    Mobile number is required.
+                                </p>
+                                <p *ngIf="signUpForm.get('mobile')?.hasError('minlength')">
+                                    Mobile number is required 10 digits.
+                                </p>
+                            </div>
+                        </div>
 
-                        <nz-form-item>
-                            <nz-form-label [nzSpan]="24">Email</nz-form-label>
-                            <nz-form-control [nzErrorTip]="'Please enter a valid email address'">
-                                <input nz-input formControlName="email" type="email" placeholder="Enter your email" />
-                            </nz-form-control>
-                        </nz-form-item>
-                        <p *ngIf="signUpForm.get('email')?.hasError('required') && signUpForm.get('email')?.touched">
-                            Email is required.
-                        </p>
-                        <p *ngIf="signUpForm.get('email')?.hasError('email') && signUpForm.get('email')?.touched">
-                            Enter a valid email address.
-                        </p>
+                        <div>
+                            <nz-form-item>
+                                <nz-form-label [nzSpan]="24">Password</nz-form-label>
+                                <nz-form-control>
+                                    <input nz-input formControlName="password" type="password"
+                                        placeholder="Enter your password" />
+                                </nz-form-control>
+                            </nz-form-item>
+                            <div *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.errors">
+                                <p *ngIf="signUpForm.get('password')?.hasError('required')">
+                                    Password is required.
+                                </p>
+                                <p *ngIf="signUpForm.get('password')?.hasError('pattern')">
+                                    Your password must be at least 5 characters long, contain at least one number and
+                                    have a mixture of uppercase and lowercase letters.
+                                </p>
+                            </div>
+                        </div>
 
-                        <nz-form-item>
-                            <nz-form-label [nzSpan]="24">Mobile</nz-form-label>
-                            <nz-form-control [nzErrorTip]="'Enter a valid mobile number (10 digits)'">
-                                <input nz-input formControlName="mobile" type="tel"
-                                    placeholder="Enter your mobile number" />
-                            </nz-form-control>
-                        </nz-form-item>
-                        <p *ngIf="signUpForm.get('mobile')?.hasError('required') && signUpForm.get('mobile')?.touched">
-                            Mobile number is required.
-                        </p>
-                        <p *ngIf="signUpForm.get('mobile')?.hasError('pattern') && signUpForm.get('mobile')?.touched">
-                            Enter a valid mobile number (10 digits).
-                        </p>
-
-                        <nz-form-item>
-                            <nz-form-label [nzSpan]="24">Password</nz-form-label>
-                            <nz-form-control [nzErrorTip]="'Password is required'">
-                                <input nz-input formControlName="password" type="password"
-                                    placeholder="Enter your password" />
-                            </nz-form-control>
-                        </nz-form-item>
-                        <p
-                            *ngIf="signUpForm.get('password')?.hasError('required') && signUpForm.get('password')?.touched">
-                            Password is required.
-                        </p>
-
+                        <div>
+                            <nz-form-item>
+                                <nz-form-label [nzSpan]="24">Confirm Password</nz-form-label>
+                                <nz-form-control>
+                                    <input nz-input formControlName="confirmpassword" type="password"
+                                        (input)="confirmpassword($event)" placeholder="Enter your confirm password" />
+                                </nz-form-control>
+                            </nz-form-item>
+                            <div
+                                *ngIf="signUpForm.get('confirmpassword')?.touched && signUpForm.get('confirmpassword')?.errors">
+                                <p *ngIf="signUpForm.get('confirmpassword')?.hasError('required')">
+                                    Confirm Password is required
+                                </p>
+                            </div>
+                            <div *ngIf="!isPasswordMatch && !signUpForm.get('confirmpassword')?.hasError('required')">
+                                <p>Passwords do not match</p>
+                            </div>
+                            <!-- {{!isPasswordMatch}} -->
+                            <div
+                                *ngIf="isPasswordMatch && signUpForm.get('confirmpassword')?.touched && !signUpForm.get('confirmpassword')?.hasError('required')">
+                                <p [ngClass]="'green'">Passwords is match</p>
+                            </div>
+                        </div>
                         <nz-form-item>
                             <nz-form-control>
-                                <button nz-button [nzType]="'primary'" [disabled]="signUpForm.invalid" type="submit">
-                                    Sign Up
-                                </button>
-                                <nz-spin *ngIf="isLoading" nzSimple></nz-spin>
+                                <button nz-button [nzType]="'primary'"
+                                    [style.Background-color]="signUpForm.invalid? '#1890ff':'#1890ff'"
+                                    [disabled]="signUpForm.invalid || !isPasswordMatch" type="submit">Sign Up</button>
                             </nz-form-control>
                         </nz-form-item>
                     </nz-form>

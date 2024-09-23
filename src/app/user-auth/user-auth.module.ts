@@ -7,13 +7,15 @@ import {AuthRoutingModule} from './user-routing.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzFormModule } from 'ng-zorro-antd/form';
-
+import { NumberonlyDirective } from './CustomDiractives/numberonly.directive';
+import { NzNotificationModule } from 'ng-zorro-antd/notification';
 
 console.log('user-auth load module')
 @NgModule({
   declarations: [
     LoginComponent,
-    SignUpComponent
+    SignUpComponent,
+    NumberonlyDirective
   ],
   imports: [
     CommonModule,
@@ -22,13 +24,13 @@ console.log('user-auth load module')
     AuthRoutingModule,
     NzButtonModule,
     NzInputModule,
-    NzFormModule
+    NzFormModule,
+    NzNotificationModule
     
   ],
   exports:[
     LoginComponent,
     SignUpComponent,
-    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

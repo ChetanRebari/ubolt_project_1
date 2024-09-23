@@ -17,6 +17,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 registerLocaleData(hi);
 import { NzButtonModule } from 'ng-zorro-antd/button';
+import { UserAuthModule } from "./user-auth/user-auth.module";
+
+
 
 
 @NgModule({
@@ -26,7 +29,7 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     AboutComponent,
     ServicesComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,8 +37,9 @@ import { NzButtonModule } from 'ng-zorro-antd/button';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NzButtonModule
-  ],
+    NzButtonModule,
+    UserAuthModule
+],
   providers: [
     { provide: NZ_I18N, useValue: hi_IN }
   ],

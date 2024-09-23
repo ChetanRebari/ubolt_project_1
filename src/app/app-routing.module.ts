@@ -5,6 +5,7 @@ import { AboutComponent } from './components/about/about.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ServicesComponent } from './components/services/services.component';
 import { authGuard } from './guard/auth.guard';
+import { LoginComponent } from './user-auth/login/login.component';
 
 
 const routes: Routes = [
@@ -12,10 +13,10 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent, canActivate: [authGuard]},
   {path:'dashboard',component:DashboardComponent,canActivate:[authGuard]},
   {path:'services',component:ServicesComponent,canActivate:[authGuard]},
-  { path: '', loadChildren: () => import('./user-auth/user-auth.module').then(m => m.UserAuthModule) },
-
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: '/login', pathMatch: 'full'},
+  { path: '', loadChildren: () => import('./user-auth/user-auth.module').then(m => m.UserAuthModule)},
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

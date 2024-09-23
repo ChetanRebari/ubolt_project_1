@@ -16,3 +16,9 @@ height: calc(100% - 73px);
 height: 100%;
 }
 }
+.password-icon{
+    cursor: pointer;
+    position: absolute;
+    top: 13px;
+    right: 30px;
+}
