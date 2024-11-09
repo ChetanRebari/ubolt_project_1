@@ -1,0 +1,68 @@
+<section class="login_section">
+    <div class="row">
+        <div class="col-md-8 ">
+            <div class="left-box">
+                <p class="heading">A Smart Way to manage</p>
+                <p class="subheading">YOUR TRANSPORT CHAIN</p>
+            </div>
+            <div class="img-box">
+                <img src="/assets/ubolt/bg.jpeg" alt="img">
+            </div>
+        </div>
+        <div class="col-md-4 bg">
+            <div class="right-box">
+                <div class="logo text-center mt-5">
+                    <img src="/assets/ubolt/logo.jpeg" alt="logo">
+                    <h2 class="form_heading">Welcome To Ubolt</h2>
+                    <p class="opacity">please login to continue to your account</p>
+                </div>
+                <div>
+                    <div>
+                        <div>
+                            <form class="loginform " [formGroup]="login" (ngSubmit)="onSubmit()">
+                                <nz-form [nzLayout]="'vertical'" class="form-container">
+                                    <div>
+                                        <nz-form-item class="items">
+                                            <nz-form-control>
+                                                <nz-form-label>Email</nz-form-label>
+                                                <input nz-input formControlName="email" type="email"/>
+                                            </nz-form-control>
+                                        </nz-form-item>
+                                    </div>
+                                    <div>
+                                        <nz-form-item class="absolute items">
+                                            <nz-form-control>
+                                                <nz-form-label>Password</nz-form-label>
+                                                <input nz-input formControlName="password"
+                                                    [type]="changetype?'password':'text'" />
+                                                <span (click)="passwordShow()" class="password-icon">
+                                                    <i
+                                                        [ngClass]="visible? 'fa-solid fa-eye-slash':'fa-regular fa-eye'"></i>
+                                                </span>
+                                            </nz-form-control>
+                                        </nz-form-item>
+                                    </div>
+                                    <div class="mt-2">
+                                        <a href="#" class="ms-4 ">forgotpassword ?</a>
+                                    </div>
+                                    <div class="text-center login_box mt-2">
+                                        <nz-form-item>
+                                            <nz-form-control>
+                                                <button class="mt-2 login_btn" nz-button [nzType]="'primary'"
+                                                    type="submit">login</button>
+                                            </nz-form-control>
+                                        </nz-form-item>
+                                        <div>
+                                            <span>or</span>
+                                            <p>Need an account? <a href="#" class="border-bottom">Create one</a></p>
+                                        </div>
+                                    </div>
+                                </nz-form>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

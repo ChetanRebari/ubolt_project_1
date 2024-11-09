@@ -103,7 +103,6 @@
                             <div *ngIf="!isPasswordMatch && !signUpForm.get('confirmpassword')?.hasError('required')">
                                 <p>Passwords do not match</p>
                             </div>
-                            <!-- {{!isPasswordMatch}} -->
                             <div
                                 *ngIf="isPasswordMatch && signUpForm.get('confirmpassword')?.touched && !signUpForm.get('confirmpassword')?.hasError('required')">
                                 <p [ngClass]="'green'">Passwords is match</p>

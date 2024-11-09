@@ -1,3 +1,6 @@
+.container{
+  padding-left: 50px;
+}
 .card-custom {
     transition: transform 0.3s;
   }

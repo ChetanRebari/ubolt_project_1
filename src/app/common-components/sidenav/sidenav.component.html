@@ -1,0 +1,99 @@
+
+<section class="sidebar" [ngClass]="{'hidden': isNavHidden}">
+    <div class="wrapper">
+        <ul nz-menu nzMode="inline" nzTheme="dark" [nzInlineCollapsed]="isCollapsed">
+            <button class="collapsed_btn" nz-button nzType="primary" (click)="toggleCollapsed()">
+                <span nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></span>
+            </button>
+            <li nz-submenu nzTitle="Subscriptions Pages" nzIcon="setting">
+                <ul>
+                    <li nz-menu-item>Option 5</li>
+                    <li nz-menu-item>Option 6</li>
+                    <li nz-submenu nzTitle="Submenu">
+                        <ul>
+                            <li nz-menu-item>Option 7</li>
+                            <li nz-menu-item>Option 8</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="User Management" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Vehicle Management" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Drivers" nzIcon="setting">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Route Management" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Account Master" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Tax" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Video Management" nzIcon="setting">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Consignment Management" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Trip Management" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item><a routerLink="trip">Trip</a></li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Report Module" nzIcon="appstore">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+            <li nz-submenu nzTitle="Settings" nzIcon="setting">
+                <ul>
+                    <li nz-menu-item>Option 9</li>
+                    <li nz-menu-item>Option 10</li>
+                    <li nz-menu-item>Option 11</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</section>

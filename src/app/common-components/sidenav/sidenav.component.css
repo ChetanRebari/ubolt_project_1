@@ -1,0 +1,41 @@
+.sidebar{
+    /* position: -webkit-sticky;
+    top: 43px; */
+
+    margin-top: 57px;
+}
+.wrapper {
+    /* width: 240px; */
+    /* top: 60px; */
+    height: 100vh;
+    background: #001529;
+    position: fixed;
+    top: 57px;
+    z-index: 1;
+    transition: 0.1s ease-in-out;
+
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+
+}
+.sidebar .wrapper {
+    /* height: 501px;  */
+    overflow-y: auto;
+}
+
+/* Scroll bar ko hide karne ke liye */
+.sidebar .wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.collapsed_btn {
+    background-color:#001529;
+    border: none;
+    margin: 10px 0px 0px 20px;
+    position: sticky;
+    top: 0;
+    
+}
+/* .hidden {
+    visibility: hidden;
+} */

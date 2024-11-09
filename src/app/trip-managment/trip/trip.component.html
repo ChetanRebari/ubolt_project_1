@@ -1,0 +1,98 @@
+<div class="container mt-5">
+  <div class="trip_header">
+    <div>
+      <button nz-button class="Create_btn" [nzSize]="size" nzShape="round">
+        <span nz-icon nzType="plus-circle" nzTheme="outline"></span>
+        Create Trip
+      </button>
+    </div>
+    <div class="d-flex">
+      <button class="Search_btn" nz-button nzType="default">
+        <span nz-icon nzType="search"></span>
+        Search
+      </button>
+
+      <button class="Default_btn" nz-button nzType="default">
+        Filter
+        <span nz-icon nzType="control" nzTheme="outline"></span>
+      </button>
+      <button class="Customize_btn" nz-button nzType="default">
+        Customize
+        <span nz-icon nzType="setting" nzTheme="outline"></span>
+      </button>
+    </div>
+  </div>
+  <div class="table  mt-5" (scroll)="onScroll($event)">
+    <nz-table  [nzData]="listOfData" [nzScroll]="{ x: '1690px', y: '360px' }" [nzShowPagination]="false" >
+      <thead>
+        <tr>
+          <th class="th">Trip Date</th>
+          <th>Trip Number</th>
+          <th>Vehical No</th>
+          <th>Route</th>
+          <th>Delivery Status</th>
+          <th nzWidth="230px">Driver Name & Number</th>
+          <th>Vehicale Details</th>
+          <th>Trip Status</th>
+          <th>Created On</th>
+          <th class="nzRight" nzRight>Status</th>
+          <th nzRight>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of listOfData">
+          <td> {{ data.name }}</td>
+          <td>{{ data.age }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.address }}</td>
+          <td>{{ data.address }}</td>
+          <td nzRight>{{ data.address }}</td>
+          <td nzRight>
+            <span class="more_icon" nz-icon nzType="more" nzTheme="outline" nz-dropdown [nzDropdownMenu]="menu"
+              [nzPlacement]="position" nzTrigger="click"></span>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+              <ul nz-menu>
+                <li nz-menu-item>1st menu item length</li>
+                <li nz-menu-item>2nd menu item length</li>
+                <li nz-menu-item>3rd menu item length</li>
+                <li nz-menu-item>3rd menu item length</li>
+                <li nz-menu-item>3rd menu item length</li>
+                <li nz-menu-item>3rd menu item length</li>
+                <li nz-menu-item>3rd menu item length</li>
+              </ul>
+            </nz-dropdown-menu>
+          </td>
+        </tr>
+<!--        
+        <tr *ngFor="let item of [1, 2, 3]" >
+          <td *ngFor="let item of [1, 2, 3,4,5,6,7,8,9,10,11]">
+            <nz-space nzSize="middle">
+              <nz-skeleton-element
+                *nzSpaceItem
+                nzType="button"
+                [nzActive]="elementActive"
+                [nzSize]="elementSize"
+                [nzShape]="buttonShape"
+              ></nz-skeleton-element>  
+              </nz-space>
+          </td>
+        </tr> -->
+      </tbody>
+    </nz-table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+

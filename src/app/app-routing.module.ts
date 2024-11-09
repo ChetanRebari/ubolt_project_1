@@ -1,22 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ServicesComponent } from './components/services/services.component';
-import { authGuard } from './guard/auth.guard';
-import { LoginComponent } from './user-auth/login/login.component';
-
+import { LayoutComponent } from './layout/layout/layout.component';
+import { TripManagmentModule } from './trip-managment/trip-managment.module';
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent,canActivate:[authGuard]},
-  { path: 'about', component: AboutComponent, canActivate: [authGuard]},
-  {path:'dashboard',component:DashboardComponent,canActivate:[authGuard]},
-  {path:'services',component:ServicesComponent,canActivate:[authGuard]},
-  {path: 'login', component: LoginComponent},
-  {path: '', redirectTo: '/login', pathMatch: 'full'},
-  { path: '', loadChildren: () => import('./user-auth/user-auth.module').then(m => m.UserAuthModule)},
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: '', component: LayoutComponent, loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule), },
+
+
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

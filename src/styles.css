@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow: hidden;
+}
+body {
+    overflow-y: scroll;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* .ant-table-body {
+    overflow-x: scroll; 
+    overflow-y: hidden;  
+    -ms-overflow-style: none; 
+    scrollbar-width:none; 
+} */
+
+
+
+
+

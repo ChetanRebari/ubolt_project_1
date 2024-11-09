@@ -1,0 +1,175 @@
+.container {
+    /* position: fixed; */
+    top: 50px;
+    padding-right: 0;
+    margin-right: 0;
+    min-width: -webkit-fill-available;
+}
+
+
+[nz-button] {
+    margin-right: 8px;
+    margin-bottom: 12px;
+}
+
+.Create_btn {
+    background-color: #34c38f;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Search_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-right: 173px !important;
+    border-radius: 28px !important;
+}
+
+.Default_btn,
+.Customize_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+nz-button-group [nz-button] {
+    margin-right: 0;
+
+}
+
+.trip_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+th::before {
+    display: none;
+}
+/* 
+.nzRight {
+    right: 130.3px !important;
+} */
+
+td {
+    font-size: 14px;
+}
+
+.more_icon {
+    cursor: pointer;
+}
+
+.example {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 30px 50px;
+    margin: 20px 0;
+}
+
+
+
+/* responsive  */
+@media (max-width: 1200px) {
+    .trip_header {
+        align-items: flex-start;
+    }
+
+    .Search_btn {
+        padding-right: 100px !important;
+    }
+
+    .nzRight {
+        /* right: 146px !important; */
+    }
+}
+
+@media (max-width: 992px) {
+    .trip_header {
+        align-items: center;
+    }
+
+    .trip_header .d-flex {
+        display: flex;
+        width: 100%;
+    }
+
+    .Create_btn,
+    .Search_btn,
+    .Default_btn,
+    .Customize_btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nzRight {
+        /* right: 146px !important; */
+    }
+
+    .Search_btn {
+        padding-right: 0 !important;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .trip_header button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .trip_header .d-flex button {
+        margin-bottom: 10px;
+    }
+
+    /* .nzRight {
+        right: 146px !important;
+    } */
+
+    td {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .trip_header {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .table th,
+    .table td {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    /* .nzRight {
+        right: 146px !important;
+    } */
+
+    .Search_btn {
+        padding-right: 0 !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .trip_header button {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    /* .nzRight {
+        right: 146px !important;
+    } */
+
+    .table th,
+    .table td {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+
+    <app-header></app-header>
+    <div>
+        
+        <app-sidenav (hidden)="navhidden($event)"></app-sidenav>
+        <div class="row ">
+            <div class="col-md-12" [ngClass]="{'new-class': addNewClass}">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+
+<!-- <app-footer></app-footer> -->

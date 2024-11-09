@@ -1,38 +1,39 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
+import { NumberonlyDirective } from '../CustomDiractives/numberonly.directive';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {AuthRoutingModule} from './user-routing.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
-import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzFormModule } from 'ng-zorro-antd/form';
-import { NumberonlyDirective } from './CustomDiractives/numberonly.directive';
+import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { LoginUboltComponent } from './login-ubolt/login-ubolt.component';
 
-console.log('user-auth load module')
 @NgModule({
   declarations: [
     LoginComponent,
     SignUpComponent,
-    NumberonlyDirective
+    NumberonlyDirective,
+    LoginUboltComponent
   ],
   imports: [
     CommonModule,
+    AuthRoutingModule,
+    CommonModule,
     FormsModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     AuthRoutingModule,
     NzButtonModule,
     NzInputModule,
-    NzFormModule,
-    NzNotificationModule
-    
+    NzFormModule,  
+    NzNotificationModule,
   ],
-  exports:[
+   exports: [
     LoginComponent,
     SignUpComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-
 })
-export class UserAuthModule { }
+export class AuthModule { }

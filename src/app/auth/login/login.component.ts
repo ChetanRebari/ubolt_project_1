@@ -9,6 +9,10 @@ import { NzNotificationService } from 'ng-zorro-antd/notification';
 })
 
 export class LoginComponent {
+
+
+
+
   emailError: boolean = false;
   passwordError: boolean = false;
   visible:boolean=true;
@@ -46,4 +50,9 @@ export class LoginComponent {
   userSignUp() {
     this.router.navigate(['signup'])
   }
+
+
+
+
+  
 }

@@ -1,0 +1,130 @@
+
+.login_section {
+    width: 100%;
+    overflow-x: hidden; 
+    box-sizing: border-box;
+}
+
+.img-box {
+    height: fit-content;
+    max-width: 100%;
+}
+
+.img-box img {
+    height: auto; 
+    width: 500px;  
+    margin-left: 25px;
+    filter: brightness(1.1);
+}
+
+.heading {
+    margin-left: 103px;
+    font-size: 30px;
+    color: #1d4296;
+    font-weight: 500;
+}
+
+.subheading{
+    margin-left: 251px;
+    font-size: 30px;
+    color: #1d4296;
+    font-weight: 700;
+    margin-top: -31px;
+    max-width: 100%;
+}
+.form_heading{
+   font-weight: 700;
+   margin-bottom: 2px;
+}
+
+.opacity {
+    opacity: 0.3;
+}
+
+input {
+    padding: 9px;
+    border: 3px solid #07339b !important;
+    border-radius: 7px;
+    background-color: #eeedff;
+}
+
+.absolute {
+    position: relative;
+}
+
+.password-icon {
+    position: absolute;
+    right: 20px;
+    top: 42px;
+}
+
+.bg {
+    background-color: #f7f7f7;
+}
+
+.login_btn{
+    background-color: #07339b;
+    padding: 4px 50px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%; 
+    max-width: 400px;
+    margin: 20px auto; 
+
+}
+
+.items {
+    margin: 0px 19px 0px 19px;
+}
+
+@media only screen and (min-width: 1200px) {
+    .login_btn {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .login_btn {
+        width: 81%;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 792px) {
+    .login_btn {
+        padding: 10px 100px;
+    }
+
+    .subheading {
+        font-size: 20px;
+        font-weight: 800;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .subheading {
+        font-size: 25px;
+    }
+
+    .password-icon {
+        right: 20px;
+        top: 40px;
+    }
+
+    .login_btn {
+        min-width: 91%;
+        padding: 4px 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
